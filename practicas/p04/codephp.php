@@ -7,6 +7,7 @@
         <title> Una página PHP </title>
 </head>
 
+
 <body>
     <?php
         echo "<h3> El día de hoy es el ". date('d / M / Y H:i:s')."</h3> <hr/>";
