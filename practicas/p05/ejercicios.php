@@ -16,7 +16,7 @@ $myvar = "Válida";
 //myvar = "No válida"; 
 $var7 = "Válida";
 $_element1 = "Válida";
-//$house*5 = "No válida"; 
+//$house*5 = "No válida "; 
 
 // Imprimir variables válidas
 echo "<p>\$_myvar: $_myvar</p>";
