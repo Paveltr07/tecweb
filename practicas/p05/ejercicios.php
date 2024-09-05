@@ -22,7 +22,7 @@ $_element1 = "Válida";
 echo "<p>\$_myvar: $_myvar</p>";
 echo "<p>\$_7var: $_7var</p>";
 echo "<p>\$myvar: $myvar</p>";
-echo 'myvar es INVALIDA no comienza con $';
+echo 'myvar es INVALIDA no comienza con   $';
 echo "<p>\$var7: $var7</p>";
 echo "<p>\$_element1: $_element1</p>";
 echo '$house*5 es INVALIDA por el * (caracter especial)';
