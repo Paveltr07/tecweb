@@ -39,7 +39,7 @@ $c = &$a;
 
 echo "<p>\$a: $a</p>";
 echo "<p>\$b: $b</p>";
-echo "<p>\$c: $c</p>";
+echo "<p>\$c: $c</p>   ";
 ?>
 
 <h2>  b. Agrega al código actual las siguientes asignaciones:</h2>
