@@ -78,7 +78,7 @@ echo "\$b = $b (" . gettype($b) . ")<br>";
 $c = $b * 10;
 echo "\$c = $c (" . gettype($c) . ")<br>";
 
-//$a = $a . $b;
+//$a = $a . $b  ;
 $a .= $b;
 echo "\$a = $a (" . gettype($a) . ")<br>";
 
