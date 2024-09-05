@@ -70,7 +70,7 @@ $a = "PHP5";
 echo "\$a = $a (" . gettype($a) . ")<br>";
 
 $z[] = &$a;
-echo "\$z[0] = $z[0] (" . gettype($z) . ")<br>";
+echo "\$z[0] = $z[0] (" . gettype($z) . ")<br>  ";
 
 $b = "5a version de PHP";
 echo "\$b = $b (" . gettype($b) . ")<br>";
