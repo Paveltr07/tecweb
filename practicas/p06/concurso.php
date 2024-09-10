@@ -15,7 +15,7 @@ echo '<title>Registro Exitoso</title>';
 echo '<style>';
 echo 'body { background-color: #c3dd9b; color: #155724; font-family: Arial, sans-serif; padding: 40px; }';
 echo 'h1 { color: #065925; }'; //Verde
-echo 'h2 { color: #800080; }'; //Morado norma
+echo 'h2 { color: #800080; }'; //Morado norma 
 echo 'p { color: #0d1b07; }';//Negro 
 echo 'li { color: #0d1b07; }'; //Negro
 echo '</style>';
