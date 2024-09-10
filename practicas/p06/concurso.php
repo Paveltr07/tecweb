@@ -1,5 +1,5 @@
 <?php
-// Obtención de datos del formulario
+// Obtención de datos del formulario 
 $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : 'No proporcionado';
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'No proporcionado';
 $phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : 'No proporcionado';
