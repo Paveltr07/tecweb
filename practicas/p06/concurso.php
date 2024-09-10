@@ -6,7 +6,7 @@ $phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : 'No propor
 $story = isset($_POST['story']) ? htmlspecialchars($_POST['story']) : 'No proporcionado';
 $color = isset($_POST['color']) ? htmlspecialchars($_POST['color']) : 'No especificado';
 $size = isset($_POST['size']) ? htmlspecialchars($_POST['size']) : 'No especificado';
-
+ 
 // Mostrar la respuesta
 echo '<html>';  
 echo '<head>';
