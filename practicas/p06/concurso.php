@@ -58,7 +58,7 @@ echo '<h2>Tu diseño de Tenis (si ganas)</h2>';
 echo '<ul>';
 echo '<li><strong>Color:</strong> ' . $color . '</li>';
 echo '<li><strong>Tamaño:</strong> ' . $size . '</li>';
-echo '</ul>'; 
+echo '</ul>';  
 echo '</body>'; 
 echo '</html>';
 ?>
