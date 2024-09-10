@@ -7,7 +7,7 @@ $story = isset($_POST['story']) ? htmlspecialchars($_POST['story']) : 'No propor
 $color = isset($_POST['color']) ? htmlspecialchars($_POST['color']) : 'No especificado';
 $size = isset($_POST['size']) ? htmlspecialchars($_POST['size']) : 'No especificado';
  
-// Mostrar la respuesta
+// Mostrar la respuesta 
 echo '<html>';  
 echo '<head>';
 echo '<meta charset="utf-8">';
