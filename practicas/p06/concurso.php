@@ -8,7 +8,7 @@ $color = isset($_POST['color']) ? htmlspecialchars($_POST['color']) : 'No especi
 $size = isset($_POST['size']) ? htmlspecialchars($_POST['size']) : 'No especificado';
 
 // Mostrar la respuesta
-echo '<html>';
+echo '<html>'; 
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<title>Registro Exitoso</title>';
