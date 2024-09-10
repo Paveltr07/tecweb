@@ -59,6 +59,6 @@ echo '<ul>';
 echo '<li><strong>Color:</strong> ' . $color . '</li>';
 echo '<li><strong>Tamaño:</strong> ' . $size . '</li>';
 echo '</ul>'; 
-echo '</body>';
+echo '</body>'; 
 echo '</html>';
 ?>
