@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Vehículos</title>
+</head>
+<body>
+    <h1>Consulta de Vehículos</h1>
+    <form method="post" action="consulta.php">
+        <label for="matricula">Matrícula del auto:</label>
+        <input type="text" id="matricula" name="matricula" pattern="[A-Z]{3}[0-9]{4}" placeholder="LLLNNNN" />
+        <input type="submit" value="Buscar" />
+    </form>
+    <form method="post" action="consulta.php">
+        <input type="submit" name="mostrar_todos" value="Mostrar Todos los Autos" />
+    </form>
+</body>
+</html>
