@@ -1,5 +1,5 @@
 <?php
-// Definición del arreglo asociativo con los datos de los auto
+// Definición del arreglo asociativo con los datos de los autos
 $vehiculos = array(
     'ABC1234' => array(
         'Auto' => array(
