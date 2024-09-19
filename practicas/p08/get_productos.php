@@ -4,8 +4,8 @@
 
 	if(isset($_GET['tope'])) 
     {
-		$tope = $_GET['tope']; 
-    }
+		$tope = $_GET['tope'];  
+    } 
     else
     {
         die('Parámetro "tope" no detectado...');
