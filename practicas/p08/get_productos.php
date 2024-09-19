@@ -2,7 +2,7 @@
     header("Content-Type: application/json; charset=utf-8"); 
     $data = array(); 
 
-	if(isset($_GET['tope']))
+	if(isset($_GET['tope'])) 
     {
 		$tope = $_GET['tope'];
     }
