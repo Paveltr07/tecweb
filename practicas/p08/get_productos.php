@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: application/json; charset=utf-8"); 
-    $data = array(); 
+    $data = array();  
 
 	if(isset($_GET['tope'])) 
     {
