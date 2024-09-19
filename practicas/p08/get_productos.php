@@ -4,7 +4,7 @@
 
 	if(isset($_GET['tope'])) 
     {
-		$tope = $_GET['tope'];
+		$tope = $_GET['tope']; 
     }
     else
     {
