@@ -6,7 +6,7 @@
 		<title>Registro Completado</title>
 		<style type="text/css">
 			body {margin: 20px; 
-			background-color: #C4DF9B;
+			background-color: #C4DF9B; 
 			font-family: Verdana, Helvetica, sans-serif;
 			font-size: 90%;}
 			h1 {color: #005825;
