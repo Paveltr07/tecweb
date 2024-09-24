@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>MUCHAS GRACIAS</h1>
+		<h1>MUCHAS GRACIAS</h1> 
 
 		<p>Gracias por entrar al concurso de Tenis Mike&#174; "Chidos mis Tenis". Hemos recibido la siguiente información de tu registro:</p>
 
