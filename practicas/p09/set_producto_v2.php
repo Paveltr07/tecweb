@@ -38,14 +38,9 @@ if ($stmt = $link->prepare("SELECT 1 FROM productos WHERE nombre = ? AND marca =
     if ($stmt->num_rows > 0) {
         echo '<p>Error: El producto con el mismo nombre, marca y modelo ya existe.</p>';
     } else {
-        // Query de inserción anterior (comentada)
-        /*
-        if ($insert_stmt = $link->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado) VALUES (?, ?, ?, ?, ?, ?, ?, 0)")) {
-            $insert_stmt->bind_param("sssdsis", $nombre, $marca, $modelo, $precio, $detalles, $unidades, $imagen);
-        */
-
-        // Nueva query de inserción usando nombres de columnas y excluyendo id y eliminado
+        // Nueva query de inserción usando nombres de columnas
         if ($insert_stmt = $link->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+            // Vinculando los parámetros con los tipos correctos
             $insert_stmt->bind_param("sssdsis", $nombre, $marca, $modelo, $precio, $detalles, $unidades, $imagen);
 
             // Ejecutar la nueva query
@@ -61,10 +56,16 @@ if ($stmt = $link->prepare("SELECT 1 FROM productos WHERE nombre = ? AND marca =
             } else {
                 echo '<p>Error: No se pudo registrar el producto. Por favor, intenta nuevamente.</p>';
             }
+            // Cerrar la declaración de inserción
+            $insert_stmt->close();
+        } else {
+            echo '<p>Error: No se pudo preparar la consulta de inserción.</p>';
         }
     }
+    // Cerrar la declaración de selección
     $stmt->close();
 }
 
+// Cerrar la conexión a la base de datos
 $link->close();
 ?>
