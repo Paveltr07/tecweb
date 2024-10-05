@@ -1,0 +1,15 @@
+form {
+    display: flex; /*En columna*/ 
+    flex-direction: column;
+    align-items: flex-start;
+}x
+
+img { /* Margen de la foto con el boton de abajo */
+    margin-bottom: 20px;
+}
+
+
+img {  /* Tamaño maximo */ 
+    max-width: 20px;
+    max-height: 20px;
+}
