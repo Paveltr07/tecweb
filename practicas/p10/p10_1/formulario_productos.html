@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Productos</title>
+    <link rel = "stylesheet" href = "sytles.css">
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value.trim();
+            var marca = document.getElementById("marca").value;
+            var modelo = document.getElementById("modelo").value.trim();
+            var precio = parseFloat(document.getElementById("precio").value);
+            var detalles = document.getElementById("detalles").value.trim();
+            var unidades = parseInt(document.getElementById("unidades").value);
+            var imagen = document.getElementById("imagen").value.trim();
+
+            if (nombre === "" || nombre.length > 100) {
+                alert("El nombre es requerido y debe tener 100 caracteres o menos.");
+                return false;
+            }
+
+            if (marca === "") {
+                alert("Debe seleccionar una marca.");
+                return false;
+            }
+
+            var alfanumericoRegex = /^[a-zA-Z0-9]+$/;
+            if (modelo === "" || !alfanumericoRegex.test(modelo) || modelo.length > 25) {
+                alert("El modelo es requerido, debe ser alfanumérico y tener 25 caracteres o menos.");
+                return false;
+            }
+
+            if (isNaN(precio) || precio <= 99.99) {
+                alert("El precio es requerido y debe ser mayor a 99.99.");
+                return false;
+            }
+
+            if (detalles.length > 250) {
+                alert("Los detalles deben tener 250 caracteres o menos.");
+                return false;
+            }
+
+            if (isNaN(unidades) || unidades < 0) {
+                alert("Las unidades son requeridas y deben ser mayores o iguales a 0.");
+                return false;
+            }
+
+            if (imagen === "") {
+                document.getElementById("imagenPreview").src = "foto.png";
+            }
+
+            return true;
+        }
+    </script>
+
+    <script>
+        function mostrarImagen(event) {
+            var archivo = event.target.files[0];  // Obtener el archivo seleccionado
+            var preview = document.getElementById("imagenPreview");  // Elemento <img> para la vista previa
+
+            if (archivo) {
+                var reader = new FileReader();  // Crear un lector de archivos
+                reader.onload = function(e) {
+                    preview.src = e.target.result;  // Asignar la imagen seleccionada al src del <img>
+                };
+                reader.readAsDataURL(archivo);  // Leer el archivo como una URL de datos
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Formulario de Productos</h1>
+    <form onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="100" required><br><br>
+
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca" required>
+            <option value="">Seleccione una marca</option>
+            <option value="marca1">Apple</option>
+            <option value="marca2">Samsung</option>
+            <option value="marca3">Huawei</option>
+        </select><br><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" maxlength="25" required><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+
+        <label for="detalles">Detalles (opcional):</label>
+        <textarea id="detalles" name="detalles" maxlength="250"></textarea><br><br>
+
+        <label for="unidades">Unidades:</label>
+        <input type="number" id="unidades" name="unidades" min="0" required><br><br>
+
+        <label for="imagen">Ruta de la imagen (opcional):</label>
+        <!--<input type="text" id="imagen" name="imagen"><br><br> -->
+
+        <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen(event)">
+        <!-- Imagen de vista previa -->
+        <img id="imagenPreview" src="foto.png" alt="Imagen por defecto" style="max-width: 200px; max-height: 200px;">
+    </form>
+</body>
+</html>
