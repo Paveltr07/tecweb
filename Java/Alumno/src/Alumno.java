@@ -1,0 +1,49 @@
+import java.io.Serializable;
+
+public class Alumno implements Serializable {
+    private int matricula;
+    private String nombre;
+
+    //Formato transient = transitorio no se serealicen
+    //private transient String facultad;
+
+    private int edad;
+
+    private Kardex K_alumno;
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+
+    public int getEdad(){
+        return edad;
+    }
+
+    public void setMatricula(int matricula){
+        this.matricula = matricula;
+    }
+
+    public int getMatricula(){
+        return matricula;
+    }
+
+    public void setK_alumno(Kardex k_alumno){
+        this.K_alumno = k_alumno;
+    }
+
+    @Override
+    public String toString(){
+        return "Alumno : " + nombre +
+                ", Edad = " + edad +
+                ", Matricula = " + matricula+
+                K_alumno+"\"";
+    }
+}

@@ -1,0 +1,42 @@
+package tutorial;
+
+option java_package = "com.ejemplo.tutorial";   //Guardan clases generadas
+option java_outer_classname = "AdresseProto";   //nombre se desginan las clases 
+
+message Alumno {
+    required string nom = 1;
+    required int32 edad = 2;
+    required int32 matricula = 3;
+    required int32 id = 4; 
+
+    message Kardex{
+        message Materia{
+            required string nombre = 1;  
+            required int32 nrc = 2;
+            required int32 creditos = 3;
+        }
+        repeated Materia materias = 1;
+    }
+
+    required Kardex kardex = 5;
+   
+    message Seguro {
+        required string dependencia = 1;
+        required int32 nseguro = 2;
+        required int32 vigencia = 3;
+    }
+
+    required Seguro seguros = 6;
+
+    message Practica {
+        required int32 duracion = 1;
+        required string empresa = 2;
+        repeated int32 horasdia = 3; 
+    }
+
+    required Practica practicas = 7;
+}
+
+message ListaAlumnos {
+    repeated Alumno alumno = 1;
+}
