@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     function listarProductos() {
         $.ajax({
-            url: './backend/product-list.php',
+            url: './backend/read/product-list.php',
             type: 'GET',
             success: function(response) {
                 console.log(response);
@@ -63,7 +63,7 @@ $(document).ready(function(){
         if($('#search').val()) {
             let search = $('#search').val();
             $.ajax({
-                url: './backend/product-search.php?search='+$('#search').val(),
+                url: './backend/read/product-search.php?search='+$('#search').val(),
                 data: {search},
                 type: 'GET',
                 success: function (response) {
@@ -133,7 +133,7 @@ $(document).ready(function(){
          * --> EN CASO DE NO HABER ERRORES, SE ENVIAR EL PRODUCTO A AGREGAR
          **/
 
-        const url = edit === false ? './backend/product-add.php' : './backend/product-edit.php';
+        const url = edit === false ? './backend/create/product-add.php' : './backend/update/product-edit.php';
         
         $.post(url, postData, (response) => {
             console.log(response);
@@ -163,7 +163,7 @@ $(document).ready(function(){
         if(confirm('¿Realmente deseas eliminar el producto?')) {
             const element = $(this)[0].activeElement.parentElement.parentElement;
             const id = $(element).attr('productId');
-            $.post('./backend/product-delete.php', {id}, (response) => {
+            $.post('./backend/delete/product-delete.php', {id}, (response) => {
                 $('#product-result').hide();
                 listarProductos();
             });
@@ -173,7 +173,7 @@ $(document).ready(function(){
     $(document).on('click', '.product-item', (e) => {
         const element = $(this)[0].activeElement.parentElement.parentElement;
         const id = $(element).attr('productId');
-        $.post('./backend/product-single.php', {id}, (response) => {
+        $.post('./backend/read/product-single.php', {id}, (response) => {
             // SE CONVIERTE A OBJETO EL JSON OBTENIDO
             let product = JSON.parse(response);
             // SE INSERTAN LOS DATOS ESPECIALES EN LOS CAMPOS CORRESPONDIENTES

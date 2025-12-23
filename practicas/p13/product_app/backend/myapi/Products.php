@@ -1,10 +1,6 @@
 <?php
-//namespace TECWEB\MYAPI;
-namespace ProductApp\backend;
-
-//use TECWEB\MYAPI\DataBase;
-use ProductApp\backend\DataBase;
-
+namespace ProductApp\Backend\MyApi;
+use ProductApp\Backend\MyApi\DataBase;
 require_once __DIR__ . '/DataBase.php';
 
 class Products extends DataBase {

@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ProductApp\\' => array($baseDir . '/product_app'),
+    'ProductApp\\Backend\\MyApi\\' => array($baseDir . '/backend/myapi'),
 );

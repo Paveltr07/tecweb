@@ -1,7 +1,15 @@
 {
+    "name": "psvel/product_app",
     "autoload": {
         "psr-4": {
-            "ProductApp\\": "product_app/"
+            "ProductApp\\Backend\\MyApi\\": "backend/myapi/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Paveltr07",
+            "email": "pavel.tamanis@alumno.buap.mx"
+        }
+    ],
+    "require": {}
 }

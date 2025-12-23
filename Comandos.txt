@@ -1,0 +1,24 @@
+Borrar remoto el utimo commit local y remoto
+git reset --hard HEAD~1
+git push origin --force
+
+Borrar remoto
+git rebase -i HEAD~3
+nano README.md
+git add README.md
+git rebase --continue 
+git push origin --force
+
+Recuperar el commit borrado
+git reflog
+git reset --hard <hash>
+git push origin main 
+
+
+Configurará la rama remota origin/main como la rama upstream para tu rama local main.
+Forzará el push de tus cambios a la rama remota.
+git push --set-upstream origin main --force
+
+Apodos
+git config --global alias.tree "log --graph --decorate --all --oneline"
+El de arriba lo pasa a git tree 
