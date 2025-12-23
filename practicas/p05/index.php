@@ -10,7 +10,7 @@
 <h2><a href="ejercicios.php">Practica 5 Ejercicios</a></h2>
 
 <?php
-//Codigo en PHP 
+//Codigo en PHP xd 
 ?>
 </body>
 </html>
