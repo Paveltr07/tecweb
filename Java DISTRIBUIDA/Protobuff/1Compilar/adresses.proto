@@ -1,0 +1,38 @@
+package tutorial;
+
+option java_package = "com.ejemplo.tutorial";   //Guardan clases generadas
+option java_outer_classname = "AdresseProto";   //nombre se desginan las clases 
+
+message Persona{
+     // Numero ilimitado de campos entre ellos int32, float, double o string. 
+    /* Modificadores
+    required : Obligatorio asigna un valor al campo, en caso contrario el estado es sin inicializar o sin
+    enviar 
+
+    optional : Es posible indicar un valor pero no es necesario, si no hay ningun valor se usa uno como 
+    definido como estandar. En el codigo de nuestro tutorial se introduce el valor predeterminado PERSONAL 
+    (numero de telefono fijo) para el tipo de numero de telefono.
+
+    repeated : Los campos con este modificiador pueden repetirse un numero indefinido de veces (incluso ninnguna) */
+
+    required string nom = 1;
+    required int32 id = 2;
+    optional string correo = 3;
+
+    enum TipoTelefono{
+        CELULAR = 0;
+        PERSONAL = 1;
+        PROFESIONAL = 2;
+    }
+
+    message NumeroTelefono{
+        required string numero = 1;
+        optional TipoTelefono type = 2 [default = PERSONAL];
+    }
+
+    repeated NumeroTelefono telefono = 4;
+}
+
+message LibretaDirecciones{
+    repeated Persona persona = 1;
+}
