@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#686060"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:background="#282A2C"
+        android:gravity="end|center_vertical"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="80sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/OpButton"
+            android:layout_width="0dp"
+            android:layout_weight="3.065"
+            android:text="BORRAR"
+            android:background="@color/red"
+            android:textColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/OpButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="70sp"
+            android:text="÷"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button android:id="@+id/btn7" style="@style/CalcButton" android:text="7"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+        <Button android:id="@+id/btn8" style="@style/CalcButton" android:text="8"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btn9" style="@style/CalcButton" android:text="9"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btnMul" style="@style/OpButton" android:text="x"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btn4" style="@style/CalcButton" android:text="4" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
+        <Button android:id="@+id/btn5" style="@style/CalcButton" android:text="5" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btn6" style="@style/CalcButton" android:text="6" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btnSub" style="@style/OpButton" android:text="-" android:textSize="70sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btn1" style="@style/CalcButton" android:text="1" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btn2" style="@style/CalcButton" android:text="2" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btn3" style="@style/CalcButton" android:text="3" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <Button android:id="@+id/btnAdd" style="@style/OpButton" android:text="+"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/CalcButton"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="0" android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnDot"
+            style="@style/CalcButton"
+            android:textSize="70sp"
+            android:text="." android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnEqual"
+            style="@style/OpButton"
+            android:textSize="70sp"
+            android:text="="
+            android:background="@drawable/button_yellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+</LinearLayout>

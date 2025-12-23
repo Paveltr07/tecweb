@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Index</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .boton-largo {
+    width: 100%; 
+    padding: 15px; 
+    background-color: red; 
+    color: white;
+    font-size: 18px; 
+    font-weight: bold;
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    text-align: center; 
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .boton-largo:hover {
+    background-color: #45a049;
+  }
+
+    .rubik-cube {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      transform-style: preserve-3d;
+      transform: rotateX(-30deg) rotateY(30deg);
+      animation: rotateCube 10s infinite linear;
+      margin: 20px auto;
+    }
+  
+    .face {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  
+    .front { transform: translateZ(75px); }
+    .back { transform: rotateY(180deg) translateZ(75px); }
+    .left { transform: rotateY(-90deg) translateZ(75px); }
+    .right { transform: rotateY(90deg) translateZ(75px); }
+    .top { transform: rotateX(90deg) translateZ(75px); }
+    .bottom { transform: rotateX(-90deg) translateZ(75px); }
+  
+    .square {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+    }
+
+    .front .square { background: red; }
+    .back .square { background: orange; }
+    .left .square { background: blue; }
+    .right .square { background: green; }
+    .top .square { background: yellow; }
+    .bottom .square { background: white; }
+  
+    @keyframes rotateCube {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="home-icon">
+      <img src="home.png" alt="Home icon" />
+    </div>
+    <h1>Inicio</h1>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="reglas.html" class="active">Inicio</a></li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <div class="caja-azul">
+        <h2>BIENVENIDO AL PRIMER TORNEO DE CUBO RUBIKS 2025 : </h2>
+        <br>
+        <p>Este tomeo, tiene como objetivo propiciar para los participantes un espacio para la actividad lúdica y recreativa, y socialicen fuera del mundo digital, (por ejemplo las redes sociales) por una tarde, e inherentemente promover la convivencia familiar a través de una actividad de destreza donde se practican también valores como tolerancia, amistad, respeto, esfuerzo y dedicación</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Cubo Rubik Animado -->
+        <div class="rubik-cube">
+          <div class="face front">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="face back">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="face left">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="face right">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="face top">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="face bottom">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>  
+        
+
+        <a href="reglas.html" class="boton-largo">ENTRAR</a>
+
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <br>
+
+        <footer class="footer">
+          <a href="https://www.youtube.com/watch?v=-kx3VYHEiGg&ab_channel=Cuby" target="_blank">
+            <img src="youtube.png" alt="YouTube icon" width="50" height="50" />
+          </a>
+      
+          <a href="https://www.rubiks.com/" target="_blank">
+            <img src="enlace.jpg" alt="Cubo icon" width="50" height="50" />
+          </a>
+        </footer>
+        
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+<script>
+  document.querySelector(".home-icon img").addEventListener("click", function() {
+    window.location.href = "index.html";
+  });
+</script>

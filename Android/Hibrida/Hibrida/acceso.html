@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Ejemplo Reglas</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+
+  <style>
+    .caja-azul img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .caja-azul h2 {
+        margin-bottom: 20px;
+        color: green;
+    }
+
+    .caja-azul input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .caja-azul button {
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .caja-azul button:hover {
+        background: #45a049;
+    }
+
+    .caja-azul .social-login {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .caja-azul .social-login button {
+        width: 48%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .caja-azul a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .caja-azul a:hover {
+        text-decoration: underline;
+    }
+
+    .caja-azul img {
+    display: block;
+    margin: 0 auto; 
+    width: 200px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+ <header class="top-bar">
+  <div class="home-icon">
+    <a href="index.html">
+      <img src="home.png" alt="Home icon" />
+    </a>
+  </div>
+  <h1>Acceso</h1>
+</header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="reglas.html">Reglas</a></li>
+      <li><a href="bases.html">Bases</a></li>
+      <li><a href="resenas.html">Reseñas</a></li>
+      <li><a href="acceso.html" class="active">Acceso</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <div class="caja-azul">
+        <br>
+        <h2>LOGIN : </h2>
+        <img src="steve.jpg" alt="Logo">
+        <br>
+
+        <input type="text" id="username" placeholder="User Name">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <div>OR</div>
+        <div class="social-login">
+            <button onclick="googleLogin()" style="background: #DB4437; color: white;">Login with Google</button>
+        </div>
+        <a href="#" onclick="createAccount()">Crear una cuenta</a>
+        <br>
+        <a href="#" onclick="recoverPassword()">¿Perdiste tu contraseña?</a>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <br>
+    </section>
+  </main>
+
+  <script>
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (!username || !password) {
+            alert('Por favor, llena todos los campos.');
+            return;
+        }
+
+        alert(`Iniciando sesión para: ${username}`);
+    }
+
+    function googleLogin() {
+        alert('Redirigiendo a Google Login...');
+    }
+
+    function createAccount() {
+        alert('Redirigiendo a la página de registro...');
+    }
+
+    function recoverPassword() {
+        alert('Redirigiendo a la recuperación de contraseña...');
+    }
+  </script>
+</body>
+</html>

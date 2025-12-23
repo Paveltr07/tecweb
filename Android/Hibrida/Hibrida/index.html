@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Index</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      
+      let angle = 0; // Ángulo de rotación
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const appleRadius = 70; // Tamaño de la manzana
+
+      function drawApple() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas
+        ctx.save();
+
+        // Simular la rotación en el eje Y usando scaleX
+        let scaleX = Math.cos(angle * Math.PI / 180); // Factor de escala en X (-1 a 1)
+
+        ctx.translate(centerX, centerY); // Mover al centro
+        ctx.scale(scaleX, 1); // Aplicar transformación en X
+        ctx.translate(-centerX, -centerY); // Restaurar la posición
+
+        // Dibujar la manzana
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, appleRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.restore(); // Restaurar el contexto
+
+        // Dibujar el tallo
+        ctx.beginPath();
+        ctx.moveTo(centerX - 5, centerY - appleRadius);
+        ctx.lineTo(centerX + 5, centerY - appleRadius);
+        ctx.lineTo(centerX, centerY - appleRadius - 20);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+        ctx.closePath();
+
+        // Dibujar la hoja
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY - appleRadius - 20);
+        ctx.quadraticCurveTo(centerX + 20, centerY - appleRadius - 40, centerX + 30, centerY - appleRadius - 10);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      function animate() {
+        angle += 2; // Incrementar ángulo para simular la rotación
+        drawApple();
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    });
+  </script>
+
+
+  <style>
+    .boton-largo {
+    width: 100%; 
+    padding: 15px; 
+    background-color: red; 
+    color: white;
+    font-size: 18px; 
+    font-weight: bold;
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    text-align: center; 
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .boton-largo:hover {
+    background-color: #45a049;
+  }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="home-icon">
+      <img src="home.png" alt="Home icon" />
+    </div>
+    <h1>Inicio</h1>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="reglas.html" class="active">Inicio</a></li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <div class="caja-azul">
+        <h2>BIENVENIDO AL PRIMER CURSO DE RIFA PRODUCTOS APPLE 2025 : </h2>
+        <P>Esta rifa tiene como objetivo ayudar a la recuperación de la cuota para dar como donacion mejores equipos de computo y mayores beneficios para los estudiantes.</P>
+        <br>
+        <canvas id="canvas" width="350" height="200"></canvas>
+
+        <a href="reglas.html" class="boton-largo">ENTRAR</a>
+
+
+        <footer class="footer">
+          <a href="https://www.youtube.com/@Apple" target="_blank">
+            <img src="youtube.png" alt="YouTube icon" width="50" height="50" />
+          </a>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+<script>
+  document.querySelector(".home-icon img").addEventListener("click", function() {
+    window.location.href = "index.html";
+  });
+</script>

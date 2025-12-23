@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base -->
+    <style name="Base.Theme.Calculadora" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Colores personalizados para evitar el morado -->
+        <item name="colorPrimary">#877070</item> <!-- Gris -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#FFFFFF</item> <!-- Amarillo -->
+        <item name="colorOnSecondary">#000000</item>
+
+        <item name="android:windowBackground">#000000</item> <!-- Fondo negro -->
+        <item name="android:statusBarColor" tools:targetApi="l">#000000</item>
+
+        <!-- Desactiva el uso de color dinámico (que toma colores del sistema en Android 12+) -->
+
+
+    </style>
+
+    <!-- Tema final que tu app usa -->
+    <style name="Theme.Calculadora" parent="Base.Theme.Calculadora" />
+</resources>
